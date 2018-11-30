@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Moonlay.Domain;
-using System;
+using Moonlay.Manufactures.Domain.Entities;
+using Moonlay.Manufactures.Domain.ReadModels;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -10,8 +11,10 @@ namespace Moonlay.Manufactures.Infrastructure
     {
         public ManufactureDbContext(DbContextOptions<ManufactureDbContext> options) : base(options)
         {
-
         }
+
+        public DbSet<Product> Products => Set<Product>();
+        public DbSet<ManufactureOrderReadModel> ManufactureOrders => Set<ManufactureOrderReadModel>();
 
         public Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {

@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moonlay.Baas.Manufactures",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moonlay.Baas.Manufactures.Tests", "src\Application\Moonlay.Baas.Manufactures.Tests\Moonlay.Baas.Manufactures.Tests.csproj", "{E720D70A-C7FB-4313-89D2-5061931DA8CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moonlay.Manufactures.Events", "src\Libraries\Moonlay.Manufactures.Events\Moonlay.Manufactures.Events.csproj", "{55B30291-052A-4C47-AD64-E194DCCF55F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +94,18 @@ Global
 		{E720D70A-C7FB-4313-89D2-5061931DA8CA}.Release|x64.Build.0 = Release|Any CPU
 		{E720D70A-C7FB-4313-89D2-5061931DA8CA}.Release|x86.ActiveCfg = Release|Any CPU
 		{E720D70A-C7FB-4313-89D2-5061931DA8CA}.Release|x86.Build.0 = Release|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Debug|x64.Build.0 = Debug|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Debug|x86.Build.0 = Debug|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Release|x64.ActiveCfg = Release|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Release|x64.Build.0 = Release|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{55B30291-052A-4C47-AD64-E194DCCF55F2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{92B085B4-8ACB-4D09-86EB-A5D6B3F07C20} = {68F03C70-BC86-42B6-BDDB-EBDF01BD2579}
@@ -101,5 +115,6 @@ Global
 		{B7F60AC7-F1E1-4412-B3BF-879EC4FF93E7} = {68F03C70-BC86-42B6-BDDB-EBDF01BD2579}
 		{5B86891F-8F13-45B9-B8A2-DB31F3F81E51} = {B7F60AC7-F1E1-4412-B3BF-879EC4FF93E7}
 		{E720D70A-C7FB-4313-89D2-5061931DA8CA} = {B7F60AC7-F1E1-4412-B3BF-879EC4FF93E7}
+		{55B30291-052A-4C47-AD64-E194DCCF55F2} = {92B085B4-8ACB-4D09-86EB-A5D6B3F07C20}
 	EndGlobalSection
 EndGlobal

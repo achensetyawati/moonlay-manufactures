@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Moonlay.Manufactures.Application;
+using Moonlay.Manufactures.Domain.Repositories;
 using Moonlay.Manufactures.Infrastructure;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -14,6 +15,8 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
             services.AddTransient<IManufactureOrderService, ManufactureOrderService>();
+
+            services.AddTransient<IManufactureOrderRepository, ManufactureOrderRepository>();
         }
     }
 }

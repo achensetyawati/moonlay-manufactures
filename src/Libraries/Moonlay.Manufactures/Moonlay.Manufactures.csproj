@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Moonlay.Manufactures.Events\Moonlay.Manufactures.Events.csproj" />
     <ProjectReference Include="..\Moonlay.Manufactures.Infrastructure\Moonlay.Manufactures.Infrastructure.csproj" />
   </ItemGroup>
 
