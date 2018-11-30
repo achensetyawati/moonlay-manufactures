@@ -1,0 +1,30 @@
+<ManufactureOrders>
+
+	<ManufactureOrder output="CottonCombed">
+		<ManufactureFlows output="CottonCombed">
+			<Flow type="Spinning_Blowing" order="1"/>
+			<Flow type="Spinning_Carding" order="2" condition="Output.Quality > 10"/>
+
+		</ManufactureFlows>
+	
+		<ManufactureProcesses>
+		
+			<ManufactureProcess type="Spinning_Blowing" output="">
+				<Materials>
+				
+				</Materials>
+				
+				<Labours>
+				
+				</Labours>
+				
+				<Machines>
+				
+				</Machines>
+			</ManufactureProcess>
+			
+		</ManufactureProcesses>
+		
+	</ManufactureOrder>
+	
+</ManufactureOrders>
