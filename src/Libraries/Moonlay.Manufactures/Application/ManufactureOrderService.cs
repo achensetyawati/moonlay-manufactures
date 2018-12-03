@@ -13,26 +13,30 @@ namespace Moonlay.Manufactures.Application
     {
         private readonly IProductRepository _productRepository;
         private readonly IManufactureOrderRepository _manufactureOrderRepository;
+        private readonly IDepartmentRepository _departmentRepository;
 
-        public ManufactureOrderService(IProductRepository productRepository, IManufactureOrderRepository manufactureOrderRepository)
+        public ManufactureOrderService(IProductRepository productRepository,
+            IDepartmentRepository departmentRepository, 
+            IManufactureOrderRepository manufactureOrderRepository)
         {
             _productRepository = productRepository;
             _manufactureOrderRepository = manufactureOrderRepository;
+            _departmentRepository = departmentRepository;
         }
 
         public async Task<ManufactureOrder> PlaceOrderAsync(string orderCode, Guid unitId, Guid flowId, Guid goodsId)
         {
-            var product = new Goods(_productRepository.GetProductById(goodsId));
+            var goods = new Goods(_productRepository.GetProductById(goodsId));
 
-            var unit = new UnitDepartment(unitId, "Spinning");
+            var unit = new UnitDepartment(_departmentRepository.GetDepartmentById(unitId));
 
-            var flow = new ManufactureFlow(flowId, product, new List<ManufactureOrderActivityType> {
+            var flow = new ManufactureFlow(flowId, goods, new List<ManufactureOrderActivityType> {
                 ManufactureOrderActivityType.Spinning_Blowing,
                 ManufactureOrderActivityType.Spinning_Carding
             });
 
             var orderId = Guid.NewGuid();
-            var order = new ManufactureOrder(orderId, orderCode, unit, flow, product);
+            var order = new ManufactureOrder(orderId, orderCode, unit, flow, goods);
 
             order.AddDomainEvent(new OnManufactureOroderPlaced(orderId));
 

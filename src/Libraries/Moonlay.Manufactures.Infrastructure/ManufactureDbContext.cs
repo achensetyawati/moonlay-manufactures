@@ -14,6 +14,7 @@ namespace Moonlay.Manufactures.Infrastructure
         }
 
         public DbSet<Product> Products => Set<Product>();
+        public DbSet<Department> Departments => Set<Department>();
         public DbSet<ManufactureOrderReadModel> ManufactureOrders => Set<ManufactureOrderReadModel>();
 
         public Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))

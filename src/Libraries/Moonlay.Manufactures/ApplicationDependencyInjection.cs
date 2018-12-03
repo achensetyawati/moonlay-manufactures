@@ -17,6 +17,12 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddTransient<IManufactureOrderService, ManufactureOrderService>();
 
             services.AddTransient<IManufactureOrderRepository, ManufactureOrderRepository>();
+
+            services.AddTransient<IProductRepository, ProductRepository>();
+
+            services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+
+
         }
     }
 }

@@ -56,16 +56,23 @@ namespace Moonlay.Baas.Manufactures.Tests.Controllers
 
             //fake
 
-            var product = new Goods(Guid.NewGuid(), "Benang 401");
+            var goodsId = Guid.NewGuid();
+            var product = new Goods(goodsId, "Benang 401");
 
-            var unit = new UnitDepartment(Guid.NewGuid(), "Spinning");
+            var unitId = Guid.NewGuid();
 
-            var flow = new ManufactureFlow(Guid.NewGuid(), product, new List<ManufactureOrderActivityType> {
+            var unit = new UnitDepartment(unitId, "Spinning");
+
+            var flowId = Guid.NewGuid();
+
+            var flow = new ManufactureFlow(flowId, product, new List<ManufactureOrderActivityType> {
                 ManufactureOrderActivityType.Spinning_Blowing,
                 ManufactureOrderActivityType.Spinning_Carding
             });
 
-            var order = new ManufactureOrder(Guid.NewGuid(), "MO010101", unit, flow, product);
+            var orderCode = "MO010101";
+
+            var order = new ManufactureOrder(Guid.NewGuid(), orderCode, unit, flow, product);
 
             var orders = new List<ManufactureOrder>() {
                 order
